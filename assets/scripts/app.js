@@ -5,8 +5,7 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
-
-const board = []
+let board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 const winCombos = [
   [0, 1, 2],
@@ -20,9 +19,8 @@ const winCombos = [
 ]
 
 const checkWin = function () {
-if (board[0] === 'x') {
-    console.log('you win')
-}
+  const win1 = [0, 1, 2]
+  for (let i = 0; )
 }
 
 let playerTurn = true
@@ -39,10 +37,10 @@ const checkTurn = function () {
 }
 
 const changeText = function () {
-  checkWin()
   if ($(this).text() === '') {
     const player = checkTurn()
     $(this).text(player)
+    board[$(this).attr('id')] = player
   } else {
     console.log('bugger off')
   }
@@ -57,6 +55,6 @@ $(() => {
   $('div').on('click', changeText)
   $('.click').on('click', reset)
   $('div').each(function (index) {
-    board.push(index)
+    $(this).attr('id', index)
   })
 })
