@@ -1,5 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
 
-body {
-  background-color: red;
+section {
+  display: flex;
+  flex-direction: row;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  font-size: 150px;
+  text-align: center;
+}
+
+.square1 {
+  border-right: solid black 1px;
+  border-bottom: solid black 1px;
+}
+
+.square2 {
+  border-bottom: solid black 1px;
+}
+
+.square3 {
+  border-right: solid black 1px;
 }
