@@ -5,6 +5,15 @@ section {
   flex-direction: row;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  margin-left: 200px;
+}
+
 div {
   width: 200px;
   height: 200px;
