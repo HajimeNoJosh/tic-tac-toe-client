@@ -14,11 +14,39 @@
     <body>
       <header>
         <h1> Tic-Tac-Toe</h1>
-        <nav>
-          <a> Sign In </a>
-        </nav>
       </header>
-      <button class="click">Reset Board</button>
+      <section>
+        <hr>
+        <h2>Sign Up</h2>
+        <form id="sign-up">
+          Email: <br> <input placeholder="Enter email..." type="email" name="credentials[email]"> <br>
+          Password:<br> <input placeholder="Enter password..." type="password" name="credentials[password]"> <br>
+          Confirm Password: <br> <input placeholder="Confirm password..." type="password" name="credentials[password_confirmation]"> <br>
+          <button id="signUp">Sign up</button>
+        </form>
+        <hr>
+        <h2>Sign In</h2>
+        <form id="sign-in">
+          Email: <br> <input placeholder="Enter email..." type="email" name="credentials[email]"> <br>
+          Password: <input placeholder="Enter password..." type="password" name="credentials[password]"> <br>
+          <button id="signIn">Sign in</button>
+        </form>
+        <hr>
+        <h2>Change Password</h2>
+        <form id="change-password">
+          Old Password: <input placeholder="Enter Old Password..." type="password" name="passwords[old]]"> <br>
+          New Password: <input placeholder="Enter New Password..." type="password" name="passwords[new]"> <br>
+          <button id="changePassword">Change Password</button>
+        </form>
+        <hr>
+        <form id="sign-out">
+          <button id="signout">Sign Out</button>
+        </form>
+        <hr>
+        <h2 id="message"></h2>
+        <hr>
+</section>
+      <button class="reset">Reset Board</button>
       <section>
         <div class="square1"></div>
         <div class="square1"></div>
@@ -34,5 +62,6 @@
         <div class="square3"></div>
         <div class="square4"></div>
       </section>
+      <span id="whoseturn">It is x's turn</span>
     </body>
 </html>

@@ -154,8 +154,8 @@ const checkTurn = function () {
   return player
 }
 
-const checkTime = function () {
-  return turnNum++
+const increaseTurn = function () {
+  turnNum++
 }
 
 const changeText = function () {
@@ -165,11 +165,21 @@ const changeText = function () {
       $(this).text(player)
       board[$(this).attr('id')] = player
       console.log(board)
-      checkTime()
+      increaseTurn()
       console.log(turnNum)
+      if (player === 'x' && turnNum < 9) {
+        $('#whoseturn').html(`<span id="whoseturn">It is o's turn</span>`)
+      } else if (player === 'o' && turnNum < 9) {
+        $('#whoseturn').html(`<span id="whoseturn">It is x's turn</span>`)
+      }
     }
   }
   checkWin()
+  if (turnNum === 9 && gameOver === false) {
+    $('#whoseturn').html(`<span id="whoseturn">Its a tie</span>`)
+  } else if (gameOver === true) {
+    $('#whoseturn').html(`<span id="whoseturn">Somone won</span>`)
+  }
 }
 
 const reset = function () {
@@ -179,7 +189,9 @@ const reset = function () {
   $('div').css('background-color', 'white')
   gameOver = false
   turnNum = 0
+  $('#whoseturn').html(`<span id="whoseturn">It is x's turn</span>`)
 }
+
 module.exports = {
   reset,
   changeText
