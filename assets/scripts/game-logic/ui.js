@@ -168,19 +168,31 @@ const changeText = function () {
       increaseTurn()
       console.log(turnNum)
       if (player === 'x' && turnNum < 9) {
-        $('#whoseturn').html(`<span id="whoseturn">It is o's turn</span>`)
+        $('#whoseturn').html(`<h1 id="whoseturn">It is o's turn</h1>`)
       } else if (player === 'o' && turnNum < 9) {
-        $('#whoseturn').html(`<span id="whoseturn">It is x's turn</span>`)
+        $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
       }
     } else if ($(this).text() === 'x' || $(this).text() === 'o') {
-      $('#whoseturn').html(`<span id="whoseturn">Invalid Move</span>`)
+      $('#whoseturn').html(`<h1 id="whoseturn">Invalid Move</h1>`)
     }
   }
   checkWin()
   if (turnNum === 9 && gameOver === false) {
-    $('#whoseturn').html(`<span id="whoseturn">Its a tie</span>`)
-  } else if (gameOver === true) {
-    $('#whoseturn').html(`<span id="whoseturn">Somone won</span>`)
+    $('#whoseturn').html(`<h1 id="whoseturn">Its a tie</h1>`)
+  } else if (gameOver === true && turnNum === 3) {
+    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
+  } else if (gameOver === true && turnNum === 4) {
+    $('#whoseturn').html(`<h1 id="whoseturn">o won</h1>`)
+  } else if (gameOver === true && turnNum === 5) {
+    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
+  } else if (gameOver === true && turnNum === 6) {
+    $('#whoseturn').html(`<h1 id="whoseturn">o won</h1>`)
+  } else if (gameOver === true && turnNum === 7) {
+    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
+  } else if (gameOver === true && turnNum === 8) {
+    $('#whoseturn').html(`<h1 id="whoseturn">o won</h1>`)
+  } else if (gameOver === true && turnNum === 9) {
+    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
   }
 }
 
@@ -191,7 +203,7 @@ const reset = function () {
   $('div').css('background-color', 'white')
   gameOver = false
   turnNum = 0
-  $('#whoseturn').html(`<span id="whoseturn">It is x's turn</span>`)
+  $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
 }
 
 module.exports = {

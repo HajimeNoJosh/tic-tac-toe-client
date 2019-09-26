@@ -21,6 +21,11 @@ div {
   text-align: center;
 }
 
+.board {
+  display: flex;
+  justify-content: center;
+}
+
 .square1 {
   border-right: solid black 1px;
   border-bottom: solid black 1px;
@@ -32,4 +37,22 @@ div {
 
 .square3 {
   border-right: solid black 1px;
+}
+
+.success {
+  color: var(--green);
+}
+
+.failure {
+  color: var(--red);
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.move-me {
+  margin-left: 100px;
 }
