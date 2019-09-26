@@ -172,6 +172,8 @@ const changeText = function () {
       } else if (player === 'o' && turnNum < 9) {
         $('#whoseturn').html(`<span id="whoseturn">It is x's turn</span>`)
       }
+    } else if ($(this).text() === 'x' || $(this).text() === 'o') {
+      $('#whoseturn').html(`<span id="whoseturn">Invalid Move</span>`)
     }
   }
   checkWin()
