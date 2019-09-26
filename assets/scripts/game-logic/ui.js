@@ -199,8 +199,8 @@ const changeText = function () {
 const reset = function () {
   playerTurn = true
   board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-  $('div').text('')
-  $('div').css('background-color', 'white')
+  $('.cell').text('')
+  $('.cell').css('background-color', 'white')
   gameOver = false
   turnNum = 0
   $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
