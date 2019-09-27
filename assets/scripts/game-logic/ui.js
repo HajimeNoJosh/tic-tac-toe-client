@@ -5,6 +5,7 @@ let board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 let playerTurn = true
 let gameOver = false
 let turnNum = 0
+let playerToPass = ''
 
 const changeColor1 = function (win1) {
   if (board[win1[0]] === 'x') {
@@ -148,10 +149,13 @@ const checkWin = function () {
 const checkTurn = function () {
   let player = ''
   if (playerTurn) {
+    playerToPass = 'x'
     player = 'x'
   } else {
+    playerToPass = 'o'
     player = 'o'
   }
+  playerToPass = !playerToPass
   playerTurn = !playerTurn
   return player
 }
@@ -180,6 +184,11 @@ const changeText = function () {
     }
   }
   checkWin()
+  if (turnNum < 9) {
+    update.updateGameOver(gameOver)
+  } else if (turnNum === 9 && gameOver === true) {
+    update.updateGameOver(gameOver)
+  }
   if (turnNum === 9 && gameOver === false) {
     $('#whoseturn').html(`<h1 id="whoseturn">Its a tie</h1>`)
   } else if (gameOver === true && turnNum === 3) {
@@ -196,6 +205,9 @@ const changeText = function () {
     $('#whoseturn').html(`<h1 id="whoseturn">o won</h1>`)
   } else if (gameOver === true && turnNum === 9) {
     $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
+  }
+  if (turnNum === 9 && gameOver === false) {
+    update.updateGameOver(true)
   }
 }
 
