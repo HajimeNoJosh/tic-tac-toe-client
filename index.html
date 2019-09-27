@@ -16,6 +16,12 @@
         <h1> Tic-Tac-Toe</h1>
       </header>
       <section>
+        <h2>Sign In</h2>
+        <form id="sign-in">
+          Email: <br> <input placeholder="Enter email..." type="email" name="credentials[email]"> <br>
+          Password: <br> <input placeholder="Enter password..." type="password" name="credentials[password]"> <br>
+          <button id="signIn">Sign in</button>
+        </form>
         <hr>
         <h2>Sign Up</h2>
         <form id="sign-up">
@@ -25,14 +31,9 @@
           <button id="signUp">Sign up</button>
         </form>
         <hr>
-        <h2>Sign In</h2>
-        <form id="sign-in">
-          Email: <br> <input placeholder="Enter email..." type="email" name="credentials[email]"> <br>
-          Password: <br> <input placeholder="Enter password..." type="password" name="credentials[password]"> <br>
-          <button id="signIn">Sign in</button>
-        </form>
+
         <hr>
-        <h2>Change Password</h2>
+        <h2 id="changePassword">Change Password</h2>
         <form id="change-password">
           Old Password: <input placeholder="Enter Old Password..." type="password" name="passwords[old]]"> <br>
           New Password: <input placeholder="Enter New Password..." type="password" name="passwords[new]"> <br>
@@ -75,11 +76,11 @@
   <hr>
   <div id="amount-games"></div>
   <hr>
-  <button id="getstats">Get Stats of Won games</button> <br>
+  <button id="getstatswon">Get stats of completed games</button> <br>
   <hr>
   <div id="amount-games-won"></div>
   <hr>
-  <button id="getstats">Get Stats of Lost games</button> <br>
+  <button id="getstatslost">Get stats of still in progress games</button> <br>
   <hr>
   <div id="amount-games-lost"></div>
   <hr>

@@ -74,10 +74,11 @@ const getGames = function () {
     }
   })
 }
+
 const getGamesWon = function () {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/games/',
+    url: config.apiUrl + '/games/?over=true',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -89,10 +90,11 @@ const getGamesWon = function () {
     }
   })
 }
+
 const getGamesLost = function () {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/games/',
+    url: config.apiUrl + '/games/?over=false',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -109,5 +111,7 @@ module.exports = {
   createGame,
   updateGame,
   getGames,
-  updateGameOver
+  updateGameOver,
+  getGamesWon,
+  getGamesLost
 }

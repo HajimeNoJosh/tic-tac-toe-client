@@ -1,17 +1,31 @@
 @import '~bootstrap/scss/bootstrap';
 
-section {
-  display: flex;
-  flex-direction: row;
-}
+
 
 header {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
 
 nav {
   margin-left: 200px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+      background: #1b78d0;
+      text-transform: uppercase;
+      padding: .8em 1em;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: all 150ms;
+      white-space: nowrap;
+      font-weight: 600;
+      outline-color: #1b78d0;
+      width: 100%;
+      color: white;
 }
 
 .cell {
