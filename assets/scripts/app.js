@@ -20,4 +20,5 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#createGame').on('click', gamesApi.createGame)
   $('#data-cell-index').on('click', gamesApi.updateGame)
+  $('#getstats').on('click', gamesApi.getGames)
 })

@@ -43,7 +43,24 @@ const updateGame = function (board, player) {
   })
 }
 
+const getGames = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/games/',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+
+    },
+    success: function (data) {
+      $('#amount-games').text('Amount of games: ' + data.games.length)
+    }
+  })
+}
+
 module.exports = {
   createGame,
-  updateGame
+  updateGame,
+  getGames
 }
