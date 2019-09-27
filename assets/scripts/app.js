@@ -10,7 +10,7 @@ const gamesApi = require('./games/api.js')
 // require('./example')
 $(() => {
   $('.cell').on('click', gamelogicui.changeText)
-  $('.reset').on('click', gamelogicui.reset)
+  $('#createGame').on('click', gamelogicui.reset)
   $('.cell').each(function (index) {
     $(this).attr('id', index)
   })
@@ -19,5 +19,5 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#createGame').on('click', gamesApi.createGame)
-
+  $('#data-cell-index').on('click', gamesApi.updateGame)
 })

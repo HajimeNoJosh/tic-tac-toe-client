@@ -1,4 +1,6 @@
 'use strict'
+const update = require('../games/api.js')
+
 let board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 let playerTurn = true
 let gameOver = false
@@ -167,6 +169,7 @@ const changeText = function () {
       console.log(board)
       increaseTurn()
       console.log(turnNum)
+      update.updateGame($(this).attr('id'), player)
       if (player === 'x' && turnNum < 9) {
         $('#whoseturn').html(`<h1 id="whoseturn">It is o's turn</h1>`)
       } else if (player === 'o' && turnNum < 9) {
