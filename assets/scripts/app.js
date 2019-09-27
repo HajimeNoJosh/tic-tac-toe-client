@@ -16,13 +16,9 @@ $(() => {
   })
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#signIn').on('click', function () {
-    $('#sign-out').show()
-  })
   $('#change-password').on('submit', authEvents.onChangePassword).hide()
   $('#sign-out').on('submit', authEvents.onSignOut).hide()
   $('#createGame').on('click', gamesApi.createGame).hide()
-  $('#data-cell-index').on('click', gamesApi.updateGame).hide()
   $('#getstats').on('click', gamesApi.getGames).hide()
   $('#getstatswon').on('click', gamesApi.getGamesWon).hide()
   $('#getstatslost').on('click', gamesApi.getGamesLost).hide()

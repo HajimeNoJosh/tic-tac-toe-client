@@ -10,8 +10,13 @@ const createGame = function () {
     method: 'POST',
     url: config.apiUrl + '/games',
     success: function (data) {
-      console.log(data)
       id = data.game.id
+      $('#whoseturn').show()
+      $('.cell').show()
+      $('#getstats').show()
+      $('#getstatswon').show()
+      $('#getstatslost').show()
+      $('#sign-up').hide()
     },
     headers: {
       Authorization: 'Token token=' + store.user.token

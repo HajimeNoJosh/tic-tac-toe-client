@@ -15,7 +15,17 @@ const signIn = function (formData) {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/sign-in',
-    data: formData
+    data: formData,
+    success: function () {
+      $('#sign-out').show()
+      $('#sign-in').hide()
+      $('#sign-up').hide()
+      $('.signin').hide()
+      $('.signUp').hide()
+      $('#createGame').show()
+      $('#change-password').show()
+      $('#changePassword').show()
+    }
   })
 }
 
@@ -36,6 +46,22 @@ const signOut = function () {
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
+    },
+    success: function () {
+      $('.cell').hide()
+      $('#createGame').hide()
+      $('#change-password').hide()
+      $('#sign-in').show()
+      $('#getstats').hide()
+      $('#getstatswon').hide()
+      $('#getstatslost').hide()
+      $('#sign-up').show()
+      $('#sign-out').hide()
+      $('#amount-games-lost').hide()
+      $('#amount-games-won').hide()
+      $('#amount-games').hide()
+      $('#whoseturn').hide()
+      $('#changePassword').hide()
     }
   })
 }

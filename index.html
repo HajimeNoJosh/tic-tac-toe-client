@@ -16,36 +16,52 @@
         <h1> Tic-Tac-Toe</h1>
       </header>
       <section>
-        <h2>Sign In</h2>
+        <h2 class='signin'>Sign In</h2>
         <form id="sign-in">
           Email: <br> <input placeholder="Enter email..." type="email" name="credentials[email]"> <br>
           Password: <br> <input placeholder="Enter password..." type="password" name="credentials[password]"> <br>
           <button id="signIn">Sign in</button>
         </form>
-        <hr>
-        <h2>Sign Up</h2>
+
+        <h2 class='signUp'>Sign Up</h2>
         <form id="sign-up">
           Email: <br> <input placeholder="Enter email..." type="email" name="credentials[email]"> <br>
           Password:<br> <input placeholder="Enter password..." type="password" name="credentials[password]"> <br>
           Confirm Password: <br> <input placeholder="Confirm password..." type="password" name="credentials[password_confirmation]"> <br>
           <button id="signUp">Sign up</button>
         </form>
-        <hr>
 
-        <hr>
+
+
         <h2 id="changePassword">Change Password</h2>
         <form id="change-password">
           Old Password: <input placeholder="Enter Old Password..." type="password" name="passwords[old]]"> <br>
           New Password: <input placeholder="Enter New Password..." type="password" name="passwords[new]"> <br>
           <button id="changePassword">Change Password</button>
         </form>
-        <hr>
+
         <form id="sign-out">
           <button id="signout">Sign Out</button>
         </form>
-        <hr>
+
         <h2 id="message"></h2>
-        <hr>
+
+    </section>
+    <section>
+      <button id="createGame">Create Game</button> <br>
+
+      <button id="getstats">Get Stats</button> <br>
+
+      <div id="amount-games"></div>
+
+      <button id="getstatswon">Get stats of completed games</button> <br>
+
+      <div id="amount-games-won"></div>
+
+      <button id="getstatslost">Get stats of still in progress games</button> <br>
+
+      <div id="amount-games-lost"></div>
+
     </section>
     <section class="information">
       <h1 id="whoseturn" class="move-me">It is x's turn</h1>
@@ -65,25 +81,6 @@
         <div class="square3 cell"></div>
         <div class="square4 cell"></div>
       </section>
-<section>
-  <button id="createGame">Create Game</button> <br>
-  <hr>
-  <!-- <form id="find-index">
-    <input placeholder="Insert Index of game..." type="text" name="">
-    <button id="findindex">Insert Index of game</button>
-  </form> -->
-  <button id="getstats">Get Stats</button> <br>
-  <hr>
-  <div id="amount-games"></div>
-  <hr>
-  <button id="getstatswon">Get stats of completed games</button> <br>
-  <hr>
-  <div id="amount-games-won"></div>
-  <hr>
-  <button id="getstatslost">Get stats of still in progress games</button> <br>
-  <hr>
-  <div id="amount-games-lost"></div>
-  <hr>
-</section>
+
     </body>
 </html>

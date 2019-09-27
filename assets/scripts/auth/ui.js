@@ -24,8 +24,6 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function (responseData) {
   successMessage('Signed In Successfully!')
-  // save the `user` we got from the API inside of `store`
-  // so we can use it later, from any file
   store.user = responseData.user
 }
 
@@ -46,15 +44,13 @@ const signOutSuccess = function () {
   $('#message').removeClass()
   $('#message').addClass('success')
   $('form').trigger('reset')
-  console.log('signOutSuccess ran and nothing was returned!')
   store.user = null
 }
 
-const signOutFailure = function (error) {
+const signOutFailure = function () {
   $('#message').text('Error on sign out')
   $('#message').removeClass()
   $('#message').addClass('failure')
-  console.error('signOutFailure ran. Error is :', error)
 }
 
 module.exports = {
