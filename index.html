@@ -11,61 +11,62 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
+
       <header>
         <h1> Tic-Tac-Toe</h1>
       </header>
-      <section>
+      <section class="signInSection">
         <h2 class='signin'>Sign In</h2>
         <form id="sign-in">
-          Email: <br> <input placeholder="Enter email..." type="email" name="credentials[email]"> <br>
-          Password: <br> <input placeholder="Enter password..." type="password" name="credentials[password]"> <br>
+          Email: <input placeholder="Enter email..." type="email" name="credentials[email]">
+          Password: <input placeholder="Enter password..." type="password" name="credentials[password]">
           <button id="signIn">Sign in</button>
         </form>
-
+      </section>
+      <section class="signUpSection">
         <h2 class='signUp'>Sign Up</h2>
         <form id="sign-up">
-          Email: <br> <input placeholder="Enter email..." type="email" name="credentials[email]"> <br>
-          Password:<br> <input placeholder="Enter password..." type="password" name="credentials[password]"> <br>
-          Confirm Password: <br> <input placeholder="Confirm password..." type="password" name="credentials[password_confirmation]"> <br>
+          Email:   <input placeholder="Enter email..." type="email" name="credentials[email]">
+          Password:  <input placeholder="Enter password..." type="password" name="credentials[password]">
+          Confirm Password:   <input placeholder="Confirm password..." type="password" name="credentials[password_confirmation]">
           <button id="signUp">Sign up</button>
         </form>
-
-
-
+      </section>
+      <section class="changePasswordSection">
         <h2 id="changePassword">Change Password</h2>
         <form id="change-password">
-          Old Password: <input placeholder="Enter Old Password..." type="password" name="passwords[old]]"> <br>
-          New Password: <input placeholder="Enter New Password..." type="password" name="passwords[new]"> <br>
+          Old Password: <input placeholder="Enter Old Password..." type="password" name="passwords[old]]">
+          New Password: <input placeholder="Enter New Password..." type="password" name="passwords[new]">
           <button id="changePassword">Change Password</button>
         </form>
-
+      </section>
+      <section class="signOutSection">
         <form id="sign-out">
           <button id="signout">Sign Out</button>
         </form>
-
+      </section>
         <h2 id="message"></h2>
-
+    <section class="centerSection">
+      <button id="getstats" class="buttons">Games Played</button>
+      <div id="amount-games" ></div>
     </section>
-    <section>
-      <button id="createGame">Create Game</button> <br>
-
-      <button id="getstats">Get Stats</button> <br>
-
-      <div id="amount-games"></div>
-
-      <button id="getstatswon">Get stats of completed games</button> <br>
-
+    <section class="centerSection">
+      <button id="getstatswon" class="buttons">Completed Games</button>
       <div id="amount-games-won"></div>
-
-      <button id="getstatslost">Get stats of still in progress games</button> <br>
-
+    </section>
+    <section class="centerSection">
+      <button id="getstatslost" class="buttons">In-Progress</button>
       <div id="amount-games-lost"></div>
-
     </section>
     <section class="information">
       <h1 id="whoseturn" class="move-me">It is x's turn</h1>
     </section>
+    <section class="centerSection">
+     <button id="createGame" class="buttons">Create Game</button>
+   </section>
+    <section class="gameBoard">
       <section class="board">
         <div class="square1 cell"></div>
         <div class="square1 cell"></div>
@@ -81,6 +82,7 @@
         <div class="square3 cell"></div>
         <div class="square4 cell"></div>
       </section>
-
+</section>
     </body>
+
 </html>

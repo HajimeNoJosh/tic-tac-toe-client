@@ -10,9 +10,9 @@ let playerToPass = ''
 const changeColor1 = function (win1) {
   if (board[win1[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color', 'red')
-    $('#1').css('background-color', 'red')
-    $('#2').css('background-color', 'red')
+    $('#0').css('background-color',  '#034001')
+    $('#1').css('background-color',  '#034001')
+    $('#2').css('background-color',  '#034001')
   } else {
     gameOver = true
     $('#0').css('background-color', 'blue')
@@ -24,9 +24,9 @@ const changeColor1 = function (win1) {
 const changeColor2 = function (win2) {
   if (board[win2[0]] === 'x') {
     gameOver = true
-    $('#3').css('background-color', 'red')
-    $('#4').css('background-color', 'red')
-    $('#5').css('background-color', 'red')
+    $('#3').css('background-color',  '#034001')
+    $('#4').css('background-color',  '#034001')
+    $('#5').css('background-color',  '#034001')
   } else {
     gameOver = true
     $('#3').css('background-color', 'blue')
@@ -38,9 +38,9 @@ const changeColor2 = function (win2) {
 const changeColor3 = function (win3) {
   if (board[win3[0]] === 'x') {
     gameOver = true
-    $('#6').css('background-color', 'red')
-    $('#7').css('background-color', 'red')
-    $('#8').css('background-color', 'red')
+    $('#6').css('background-color',  '#034001')
+    $('#7').css('background-color',  '#034001')
+    $('#8').css('background-color',  '#034001')
   } else {
     gameOver = true
     $('#6').css('background-color', 'blue')
@@ -52,9 +52,9 @@ const changeColor3 = function (win3) {
 const changeColor4 = function (win4) {
   if (board[win4[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color', 'red')
-    $('#3').css('background-color', 'red')
-    $('#6').css('background-color', 'red')
+    $('#0').css('background-color',  '#034001')
+    $('#3').css('background-color',  '#034001')
+    $('#6').css('background-color',  '#034001')
   } else {
     gameOver = true
     $('#0').css('background-color', 'blue')
@@ -66,9 +66,9 @@ const changeColor4 = function (win4) {
 const changeColor5 = function (win5) {
   if (board[win5[0]] === 'x') {
     gameOver = true
-    $('#1').css('background-color', 'red')
-    $('#4').css('background-color', 'red')
-    $('#7').css('background-color', 'red')
+    $('#1').css('background-color',  '#034001')
+    $('#4').css('background-color',  '#034001')
+    $('#7').css('background-color',  '#034001')
   } else {
     gameOver = true
     $('#1').css('background-color', 'blue')
@@ -80,9 +80,9 @@ const changeColor5 = function (win5) {
 const changeColor6 = function (win6) {
   if (board[win6[0]] === 'x') {
     gameOver = true
-    $('#2').css('background-color', 'red')
-    $('#5').css('background-color', 'red')
-    $('#8').css('background-color', 'red')
+    $('#2').css('background-color',  '#034001')
+    $('#5').css('background-color',  '#034001')
+    $('#8').css('background-color',  '#034001')
   } else {
     gameOver = true
     $('#2').css('background-color', 'blue')
@@ -93,9 +93,9 @@ const changeColor6 = function (win6) {
 const changeColor7 = function (win7) {
   if (board[win7[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color', 'red')
-    $('#4').css('background-color', 'red')
-    $('#8').css('background-color', 'red')
+    $('#0').css('background-color',  '#034001')
+    $('#4').css('background-color',  '#034001')
+    $('#8').css('background-color',  '#034001')
   } else {
     gameOver = true
     $('#0').css('background-color', 'blue')
@@ -107,9 +107,9 @@ const changeColor7 = function (win7) {
 const changeColor8 = function (win8) {
   if (board[win8[0]] === 'x') {
     gameOver = true
-    $('#6').css('background-color', 'red')
-    $('#4').css('background-color', 'red')
-    $('#2').css('background-color', 'red')
+    $('#6').css('background-color',  '#034001')
+    $('#4').css('background-color',  '#034001')
+    $('#2').css('background-color',  '#034001')
   } else {
     gameOver = true
     $('#6').css('background-color', 'blue')
@@ -215,7 +215,7 @@ const reset = function () {
   playerTurn = true
   board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
   $('.cell').text('')
-  $('.cell').css('background-color', 'white')
+  $('.cell').css('background-color', '#0D0D0D')
   gameOver = false
   turnNum = 0
   $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
