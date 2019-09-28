@@ -56,6 +56,8 @@ const signOut = function () {
       $('#getstatswon').hide()
       $('#getstatslost').hide()
       $('#sign-up').show()
+      $('.signUp').show()
+      $('.signin').show()
       $('#sign-out').hide()
       $('#amount-games-lost').hide()
       $('#amount-games-won').hide()
