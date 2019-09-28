@@ -10,111 +10,111 @@ let playerToPass = ''
 const changeColor1 = function (win1) {
   if (board[win1[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color',  '#034001')
-    $('#1').css('background-color',  '#034001')
-    $('#2').css('background-color',  '#034001')
+    $('#0').css('background-color', '#034001')
+    $('#1').css('background-color', '#034001')
+    $('#2').css('background-color', '#034001')
   } else {
     gameOver = true
-    $('#0').css('background-color', 'blue')
-    $('#1').css('background-color', 'blue')
-    $('#2').css('background-color', 'blue')
+    $('#0').css('background-color', '#0339A6')
+    $('#1').css('background-color', '#0339A6')
+    $('#2').css('background-color', '#0339A6')
   }
 }
 
 const changeColor2 = function (win2) {
   if (board[win2[0]] === 'x') {
     gameOver = true
-    $('#3').css('background-color',  '#034001')
-    $('#4').css('background-color',  '#034001')
-    $('#5').css('background-color',  '#034001')
+    $('#3').css('background-color', '#034001')
+    $('#4').css('background-color', '#034001')
+    $('#5').css('background-color', '#034001')
   } else {
     gameOver = true
-    $('#3').css('background-color', 'blue')
-    $('#4').css('background-color', 'blue')
-    $('#5').css('background-color', 'blue')
+    $('#3').css('background-color', '#0339A6')
+    $('#4').css('background-color', '#0339A6')
+    $('#5').css('background-color', '#0339A6')
   }
 }
 
 const changeColor3 = function (win3) {
   if (board[win3[0]] === 'x') {
     gameOver = true
-    $('#6').css('background-color',  '#034001')
-    $('#7').css('background-color',  '#034001')
-    $('#8').css('background-color',  '#034001')
+    $('#6').css('background-color', '#034001')
+    $('#7').css('background-color', '#034001')
+    $('#8').css('background-color', '#034001')
   } else {
     gameOver = true
-    $('#6').css('background-color', 'blue')
-    $('#7').css('background-color', 'blue')
-    $('#8').css('background-color', 'blue')
+    $('#6').css('background-color', '#0339A6')
+    $('#7').css('background-color', '#0339A6')
+    $('#8').css('background-color', '#0339A6')
   }
 }
 
 const changeColor4 = function (win4) {
   if (board[win4[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color',  '#034001')
-    $('#3').css('background-color',  '#034001')
-    $('#6').css('background-color',  '#034001')
+    $('#0').css('background-color', '#034001')
+    $('#3').css('background-color', '#034001')
+    $('#6').css('background-color', '#034001')
   } else {
     gameOver = true
-    $('#0').css('background-color', 'blue')
-    $('#3').css('background-color', 'blue')
-    $('#6').css('background-color', 'blue')
+    $('#0').css('background-color', '#0339A6')
+    $('#3').css('background-color', '#0339A6')
+    $('#6').css('background-color', '#0339A6')
   }
 }
 
 const changeColor5 = function (win5) {
   if (board[win5[0]] === 'x') {
     gameOver = true
-    $('#1').css('background-color',  '#034001')
-    $('#4').css('background-color',  '#034001')
-    $('#7').css('background-color',  '#034001')
+    $('#1').css('background-color', '#034001')
+    $('#4').css('background-color', '#034001')
+    $('#7').css('background-color', '#034001')
   } else {
     gameOver = true
-    $('#1').css('background-color', 'blue')
-    $('#4').css('background-color', 'blue')
-    $('#7').css('background-color', 'blue')
+    $('#1').css('background-color', '#0339A6')
+    $('#4').css('background-color', '#0339A6')
+    $('#7').css('background-color', '#0339A6')
   }
 }
 
 const changeColor6 = function (win6) {
   if (board[win6[0]] === 'x') {
     gameOver = true
-    $('#2').css('background-color',  '#034001')
-    $('#5').css('background-color',  '#034001')
-    $('#8').css('background-color',  '#034001')
+    $('#2').css('background-color', '#034001')
+    $('#5').css('background-color', '#034001')
+    $('#8').css('background-color', '#034001')
   } else {
     gameOver = true
-    $('#2').css('background-color', 'blue')
-    $('#5').css('background-color', 'blue')
-    $('#8').css('background-color', 'blue')
+    $('#2').css('background-color', '#0339A6')
+    $('#5').css('background-color', '#0339A6')
+    $('#8').css('background-color', '#0339A6')
   }
 }
 const changeColor7 = function (win7) {
   if (board[win7[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color',  '#034001')
-    $('#4').css('background-color',  '#034001')
-    $('#8').css('background-color',  '#034001')
+    $('#0').css('background-color', '#034001')
+    $('#4').css('background-color', '#034001')
+    $('#8').css('background-color', '#034001')
   } else {
     gameOver = true
-    $('#0').css('background-color', 'blue')
-    $('#4').css('background-color', 'blue')
-    $('#8').css('background-color', 'blue')
+    $('#0').css('background-color', '#0339A6')
+    $('#4').css('background-color', '#0339A6')
+    $('#8').css('background-color', '#0339A6')
   }
 }
 
 const changeColor8 = function (win8) {
   if (board[win8[0]] === 'x') {
     gameOver = true
-    $('#6').css('background-color',  '#034001')
-    $('#4').css('background-color',  '#034001')
-    $('#2').css('background-color',  '#034001')
+    $('#6').css('background-color', '#034001')
+    $('#4').css('background-color', '#034001')
+    $('#2').css('background-color', '#034001')
   } else {
     gameOver = true
-    $('#6').css('background-color', 'blue')
-    $('#4').css('background-color', 'blue')
-    $('#2').css('background-color', 'blue')
+    $('#6').css('background-color', '#0339A6')
+    $('#4').css('background-color', '#0339A6')
+    $('#2').css('background-color', '#0339A6')
   }
 }
 
