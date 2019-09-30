@@ -5,9 +5,7 @@ let board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 let playerTurn = true
 let gameOver = false
 let turnNum = 0
-// future self you need this!!! Trust me
-let playerToPass = ''
-// future self you need this!!! Trust me
+
 
 const changeColor1 = function (win1) {
   if (board[win1[0]] === 'x') {
@@ -151,13 +149,10 @@ const checkWin = function () {
 const checkTurn = function () {
   let player = ''
   if (playerTurn) {
-    playerToPass = 'x'
     player = 'x'
   } else {
-    playerToPass = 'o'
     player = 'o'
   }
-  playerToPass = !playerToPass
   playerTurn = !playerTurn
   return player
 }
