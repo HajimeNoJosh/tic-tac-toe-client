@@ -8,7 +8,6 @@ let turnNum = 0
 let firstBackground = '#034001'
 let secondBackground = '#0339A6'
 
-
 // Each of these changes color depending on who won. It takes the winning combo
 // and depending on the index of the board array based off the winning combos
 // first index number, check for an x or o and changes color accordingly.

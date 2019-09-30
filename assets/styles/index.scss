@@ -75,12 +75,12 @@ form {
 }
 
 .cell {
-  width: 150px;
-  height: 150px;
-  font-size: 100px;
-  text-align: center;
   background-color: #0D0D0D;
   color: #3F598C;
+  font-size: 100px;
+  height: 150px;
+  text-align: center;
+  width: 150px;
 }
 
 .board {
@@ -89,8 +89,8 @@ form {
 }
 
 .square1 {
-  border-right: solid #F2F2F2 1px;
   border-bottom: solid #F2F2F2 1px;
+  border-right: solid #F2F2F2 1px;
 }
 
 .square2 {

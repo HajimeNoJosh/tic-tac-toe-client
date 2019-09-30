@@ -21,7 +21,7 @@ Install dependencies with npm install.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/HajimeNoJosh/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/HajimeNoJosh/tic-tac-toe-client/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -30,7 +30,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/HajimeNoJosh/b24679402957c
 
 ## License
 
-This project is licensed under the CC-BY-NC-SA 4.0 - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the CC-BY-NC-SA 4.0 - see the [LICENSE.md](https://github.com/HajimeNoJosh/tic-tac-toe-client/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
