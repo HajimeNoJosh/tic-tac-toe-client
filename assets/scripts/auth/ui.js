@@ -16,27 +16,33 @@ const failureMessage = function (newText) {
 
 const onSignUpSuccess = function () {
   successMessage('Signed Up Successfully!')
+  $('.password').val('')
 }
 
 const onSignUpFailure = function () {
   failureMessage('Sign Up Failed')
+  $('.password').val('')
 }
 
 const onSignInSuccess = function (responseData) {
   successMessage('Signed In Successfully!')
   store.user = responseData.user
+  $('.password').val('')
 }
 
 const onSignInFailure = function () {
   failureMessage('Sign In Failed')
+  $('.password').val('')
 }
 
 const onChangePasswordSuccess = function () {
   successMessage('Changed Password Successfully!')
+  $('.password').val('')
 }
 
 const onChangePasswordFailure = function () {
   failureMessage('Change Password Failed')
+  $('.password').val('')
 }
 
 const signOutSuccess = function () {

@@ -5,7 +5,6 @@ let board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 let playerTurn = true
 let gameOver = false
 let turnNum = 0
-let playerToPass = ''
 
 const changeColor1 = function (win1) {
   if (board[win1[0]] === 'x') {
@@ -149,13 +148,10 @@ const checkWin = function () {
 const checkTurn = function () {
   let player = ''
   if (playerTurn) {
-    playerToPass = 'x'
     player = 'x'
   } else {
-    playerToPass = 'o'
     player = 'o'
   }
-  playerToPass = !playerToPass
   playerTurn = !playerTurn
   return player
 }
@@ -164,31 +160,7 @@ const increaseTurn = function () {
   turnNum++
 }
 
-const changeText = function () {
-  if (gameOver === false) {
-    if ($(this).text() === '') {
-      const player = checkTurn()
-      $(this).text(player)
-      board[$(this).attr('id')] = player
-      console.log(board)
-      increaseTurn()
-      console.log(turnNum)
-      update.updateGame($(this).attr('id'), player)
-      if (player === 'x' && turnNum < 9) {
-        $('#whoseturn').html(`<h1 id="whoseturn">It is o's turn</h1>`)
-      } else if (player === 'o' && turnNum < 9) {
-        $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
-      }
-    } else if ($(this).text() === 'x' || $(this).text() === 'o') {
-      $('#whoseturn').html(`<h1 id="whoseturn">Invalid Move</h1>`)
-    }
-  }
-  checkWin()
-  if (turnNum < 9) {
-    update.updateGameOver(gameOver)
-  } else if (turnNum === 9 && gameOver === true) {
-    update.updateGameOver(gameOver)
-  }
+const whoWon = function () {
   if (turnNum === 9 && gameOver === false) {
     $('#whoseturn').html(`<h1 id="whoseturn">Its a tie</h1>`)
   } else if (gameOver === true && turnNum === 3) {
@@ -206,6 +178,32 @@ const changeText = function () {
   } else if (gameOver === true && turnNum === 9) {
     $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
   }
+}
+
+const changeText = function () {
+  if (gameOver === false) {
+    if ($(this).text() === '') {
+      const player = checkTurn()
+      $(this).text(player)
+      board[$(this).attr('id')] = player
+      increaseTurn()
+      update.updateGame($(this).attr('id'), player)
+      if (player === 'x' && turnNum < 9) {
+        $('#whoseturn').html(`<h1 id="whoseturn">It is o's turn</h1>`)
+      } else if (player === 'o' && turnNum < 9) {
+        $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
+      }
+    } else if ($(this).text() === 'x' || $(this).text() === 'o') {
+      $('#whoseturn').html(`<h1 id="whoseturn">Invalid Move</h1>`)
+    }
+  }
+  checkWin()
+  if (turnNum < 9) {
+    update.updateGameOver(gameOver)
+  } else if (turnNum === 9 && gameOver === true) {
+    update.updateGameOver(gameOver)
+  }
+  whoWon()
   if (turnNum === 9 && gameOver === false) {
     update.updateGameOver(true)
   }

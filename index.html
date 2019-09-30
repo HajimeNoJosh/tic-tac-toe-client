@@ -8,8 +8,12 @@
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
       <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer>
+
+      </script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer>
+
+      </script>
     </head>
 
     <body>
@@ -21,7 +25,7 @@
         <h2 class='signin'>Sign In</h2>
         <form id="sign-in">
           Email: <input placeholder="Enter email..." type="email" name="credentials[email]">
-          Password: <input placeholder="Enter password..." type="password" name="credentials[password]">
+          Password: <input placeholder="Enter password..." type="password" name="credentials[password]" class="password">
           <button id="signIn">Sign in</button>
         </form>
       </section>
@@ -29,16 +33,16 @@
         <h2 class='signUp'>Sign Up</h2>
         <form id="sign-up">
           Email:   <input placeholder="Enter email..." type="email" name="credentials[email]">
-          Password:  <input placeholder="Enter password..." type="password" name="credentials[password]">
-          Confirm Password:   <input placeholder="Confirm password..." type="password" name="credentials[password_confirmation]">
+          Password:  <input placeholder="Enter password..." type="password" name="credentials[password]" class="password">
+          Confirm Password:   <input placeholder="Confirm password..." type="password" name="credentials[password_confirmation]" class="password">
           <button id="signUp">Sign up</button>
         </form>
       </section>
       <section class="changePasswordSection">
         <h2 id="changePassword">Change Password</h2>
         <form id="change-password">
-          Old Password: <input placeholder="Enter Old Password..." type="password" name="passwords[old]]">
-          New Password: <input placeholder="Enter New Password..." type="password" name="passwords[new]">
+          Old Password: <input placeholder="Enter Old Password..." type="password" name="passwords[old]]" class="password">
+          New Password: <input placeholder="Enter New Password..." type="password" name="passwords[new]" class="password">
           <button id="changePassword">Change Password</button>
         </form>
       </section>
