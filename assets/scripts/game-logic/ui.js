@@ -6,6 +6,9 @@ let playerTurn = true
 let gameOver = false
 let turnNum = 0
 
+// Each of these changes color depending on who won. It takes the winning combo
+// and depending on the index of the board array based off the winning combos
+// first index number, check for an x or o and changes color accordingly.
 
 const changeColor1 = function (win1) {
   if (board[win1[0]] === 'x') {
@@ -118,6 +121,10 @@ const changeColor8 = function (win8) {
   }
 }
 
+// This has the winning combos and checks for the board array index based off of
+// the winning combos number in the 0 1 and 2 index. It checks if all 3 are the
+// same value and then applies the color change.
+
 const checkWin = function () {
   const win1 = [0, 1, 2]
   const win2 = [3, 4, 5]
@@ -146,6 +153,10 @@ const checkWin = function () {
   }
 }
 
+// This function changes the player. It sets a varaible player and if playerTurn
+// is true changes to x otherwise to o and switches playerTurn to false or true
+// after being run through. It then returns the player.
+
 const checkTurn = function () {
   let player = ''
   if (playerTurn) {
@@ -157,9 +168,15 @@ const checkTurn = function () {
   return player
 }
 
+// This function just increases the turnNum for use in which turn it is.
+
 const increaseTurn = function () {
   turnNum++
 }
+
+// This function changes the text of who won the game over all. It takes the
+// gameOver variable and checks if the game is over which if it isn't then its a
+// tie if the turnNum is 9. Otherwise based off which turn it is thats who won.
 
 const whoWon = function () {
   if (turnNum === 9 && gameOver === false) {
@@ -181,36 +198,56 @@ const whoWon = function () {
   }
 }
 
+// This is being passwed into the API to increase the counter of how many games
+// where completed or are in progress.
+
+const updateGameOver = function () {
+  if (turnNum < 9) {
+    update.updateGameOver(gameOver)
+  } else if (turnNum === 9 && gameOver === true) {
+    update.updateGameOver(gameOver)
+  } else if (turnNum === 9 && gameOver === false) {
+    update.updateGameOver(true)
+  }
+}
+
+// This function switches the text for whose turn it is.
+
+const whoseTurn = function (player) {
+  if (player === 'x' && turnNum < 9) {
+    $('#whoseturn').html(`<h1 id="whoseturn">It is o's turn</h1>`)
+  } else if (player === 'o' && turnNum < 9) {
+    $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
+  }
+}
+
+// This function does the whole game. It checks to see if the game is over which
+// if it is not over then it checks if the text within the clicked space is empty.
+// if it is then it sets the varaible player to equeal checkTurn() it updates
+// the text to that player and updates the board array to that player. It
+// increases the turn. The API is updated with a similar functionality. Finally,
+// it invokes the whoseTurn function to update the HTML. Otherwise it is an
+// invalid move. It then invokes the 3 remaining functions as defined above.
+
 const changeText = function () {
   if (gameOver === false) {
     if ($(this).text() === '') {
       const player = checkTurn()
       $(this).text(player)
       board[$(this).attr('id')] = player
-      console.log(board)
       increaseTurn()
-      console.log(turnNum)
       update.updateGame($(this).attr('id'), player)
-      if (player === 'x' && turnNum < 9) {
-        $('#whoseturn').html(`<h1 id="whoseturn">It is o's turn</h1>`)
-      } else if (player === 'o' && turnNum < 9) {
-        $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
-      }
+      whoseTurn(player)
     } else if ($(this).text() === 'x' || $(this).text() === 'o') {
       $('#whoseturn').html(`<h1 id="whoseturn">Invalid Move</h1>`)
     }
   }
   checkWin()
-  if (turnNum < 9) {
-    update.updateGameOver(gameOver)
-  } else if (turnNum === 9 && gameOver === true) {
-    update.updateGameOver(gameOver)
-  }
+  updateGameOver()
   whoWon()
-  if (turnNum === 9 && gameOver === false) {
-    update.updateGameOver(true)
-  }
 }
+
+// This just resets the game engine to the original state.
 
 const reset = function () {
   playerTurn = true
