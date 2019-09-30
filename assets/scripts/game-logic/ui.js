@@ -5,6 +5,7 @@ let board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 let playerTurn = true
 let gameOver = false
 let turnNum = 0
+let firstBackground = ''
 
 // Each of these changes color depending on who won. It takes the winning combo
 // and depending on the index of the board array based off the winning combos
@@ -13,7 +14,7 @@ let turnNum = 0
 const changeColor1 = function (win1) {
   if (board[win1[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color', '#034001')
+    $('#0').css('background-color', firstBackground)
     $('#1').css('background-color', '#034001')
     $('#2').css('background-color', '#034001')
   } else {
@@ -229,11 +230,12 @@ const whoseTurn = function (player) {
 // it invokes the whoseTurn function to update the HTML. Otherwise it is an
 // invalid move. It then invokes the 3 remaining functions as defined above.
 
-const changeText = function () {
+const changeText = function (event) {
   if (gameOver === false) {
     if ($(this).text() === '') {
       const player = checkTurn()
       $(this).text(player)
+      console.log($(event.target).text())
       board[$(this).attr('id')] = player
       increaseTurn()
       update.updateGame($(this).attr('id'), player)

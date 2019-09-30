@@ -3,13 +3,13 @@
 const store = require('../store.js')
 
 const successMessage = function (newText) {
-  $('#message').text(newText)
+  $('#message').text(newText).hide('fast')
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
 
 const failureMessage = function (newText) {
-  $('#message').text(newText)
+  $('#message').text(newText).hide(2000)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
 }
