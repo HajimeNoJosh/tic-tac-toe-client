@@ -25,6 +25,7 @@ const signIn = function (formData) {
       $('#createGame').show()
       $('#change-password').show()
       $('#changePassword').show()
+      $('#colors').show()
     }
   })
 }
@@ -62,6 +63,7 @@ const signOut = function () {
       $('#amount-games').hide()
       $('#whoseturn').hide()
       $('#changePassword').hide()
+      $('#colors').hide()
     }
   })
 }

@@ -24,4 +24,19 @@ $(() => {
   $('#getstatslost').on('click', gamesApi.getGamesLost).hide()
   $('#whoseturn').hide()
   $('#changePassword').hide()
+  $('#colors').hide().on('change', function () {
+    if (this.value === 'white') {
+      gamelogicui.changeColorWhite()
+    } else if (this.value === 'yellow') {
+      gamelogicui.changeColorYellow()
+    } else if (this.value === 'blue') {
+      gamelogicui.changeColorBlue()
+    } else if (this.value === 'orange') {
+      gamelogicui.changeColorOrange()
+    } else if (this.value === 'random') {
+      gamelogicui.changeColorRandom()
+    } else {
+      gamelogicui.changeColorDefault()
+    }
+  })
 })

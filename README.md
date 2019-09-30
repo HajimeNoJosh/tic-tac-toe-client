@@ -4,6 +4,8 @@
 
 This project is for General Assembly SEI-05 first project of a 10 week full time immersive. We were tasked with creating a tic-tac-toe game engine supporting a Authentication API and Game storage API. This project includes: Sign-in, Sign-up, Change Password, Sign-out, Amount of games played per account, games completed, games in progress and Tic-Tac-Toe game engine.
 
+I began my project with game logic. I created an array for my board and created a way to switch between users. I wanted to be able to fill up my array with said player pieces as they made moves. So I began to 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.

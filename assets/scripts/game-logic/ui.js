@@ -5,7 +5,9 @@ let board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 let playerTurn = true
 let gameOver = false
 let turnNum = 0
-let firstBackground = ''
+let firstBackground = '#034001'
+let secondBackground = '#0339A6'
+
 
 // Each of these changes color depending on who won. It takes the winning combo
 // and depending on the index of the board array based off the winning combos
@@ -15,110 +17,110 @@ const changeColor1 = function (win1) {
   if (board[win1[0]] === 'x') {
     gameOver = true
     $('#0').css('background-color', firstBackground)
-    $('#1').css('background-color', '#034001')
-    $('#2').css('background-color', '#034001')
+    $('#1').css('background-color', firstBackground)
+    $('#2').css('background-color', firstBackground)
   } else {
     gameOver = true
-    $('#0').css('background-color', '#0339A6')
-    $('#1').css('background-color', '#0339A6')
-    $('#2').css('background-color', '#0339A6')
+    $('#0').css('background-color', secondBackground)
+    $('#1').css('background-color', secondBackground)
+    $('#2').css('background-color', secondBackground)
   }
 }
 
 const changeColor2 = function (win2) {
   if (board[win2[0]] === 'x') {
     gameOver = true
-    $('#3').css('background-color', '#034001')
-    $('#4').css('background-color', '#034001')
-    $('#5').css('background-color', '#034001')
+    $('#3').css('background-color', firstBackground)
+    $('#4').css('background-color', firstBackground)
+    $('#5').css('background-color', firstBackground)
   } else {
     gameOver = true
-    $('#3').css('background-color', '#0339A6')
-    $('#4').css('background-color', '#0339A6')
-    $('#5').css('background-color', '#0339A6')
+    $('#3').css('background-color', secondBackground)
+    $('#4').css('background-color', secondBackground)
+    $('#5').css('background-color', secondBackground)
   }
 }
 
 const changeColor3 = function (win3) {
   if (board[win3[0]] === 'x') {
     gameOver = true
-    $('#6').css('background-color', '#034001')
-    $('#7').css('background-color', '#034001')
-    $('#8').css('background-color', '#034001')
+    $('#6').css('background-color', firstBackground)
+    $('#7').css('background-color', firstBackground)
+    $('#8').css('background-color', firstBackground)
   } else {
     gameOver = true
-    $('#6').css('background-color', '#0339A6')
-    $('#7').css('background-color', '#0339A6')
-    $('#8').css('background-color', '#0339A6')
+    $('#6').css('background-color', secondBackground)
+    $('#7').css('background-color', secondBackground)
+    $('#8').css('background-color', secondBackground)
   }
 }
 
 const changeColor4 = function (win4) {
   if (board[win4[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color', '#034001')
-    $('#3').css('background-color', '#034001')
-    $('#6').css('background-color', '#034001')
+    $('#0').css('background-color', firstBackground)
+    $('#3').css('background-color', firstBackground)
+    $('#6').css('background-color', firstBackground)
   } else {
     gameOver = true
-    $('#0').css('background-color', '#0339A6')
-    $('#3').css('background-color', '#0339A6')
-    $('#6').css('background-color', '#0339A6')
+    $('#0').css('background-color', secondBackground)
+    $('#3').css('background-color', secondBackground)
+    $('#6').css('background-color', secondBackground)
   }
 }
 
 const changeColor5 = function (win5) {
   if (board[win5[0]] === 'x') {
     gameOver = true
-    $('#1').css('background-color', '#034001')
-    $('#4').css('background-color', '#034001')
-    $('#7').css('background-color', '#034001')
+    $('#1').css('background-color', firstBackground)
+    $('#4').css('background-color', firstBackground)
+    $('#7').css('background-color', firstBackground)
   } else {
     gameOver = true
-    $('#1').css('background-color', '#0339A6')
-    $('#4').css('background-color', '#0339A6')
-    $('#7').css('background-color', '#0339A6')
+    $('#1').css('background-color', secondBackground)
+    $('#4').css('background-color', secondBackground)
+    $('#7').css('background-color', secondBackground)
   }
 }
 
 const changeColor6 = function (win6) {
   if (board[win6[0]] === 'x') {
     gameOver = true
-    $('#2').css('background-color', '#034001')
-    $('#5').css('background-color', '#034001')
-    $('#8').css('background-color', '#034001')
+    $('#2').css('background-color', firstBackground)
+    $('#5').css('background-color', firstBackground)
+    $('#8').css('background-color', firstBackground)
   } else {
     gameOver = true
-    $('#2').css('background-color', '#0339A6')
-    $('#5').css('background-color', '#0339A6')
-    $('#8').css('background-color', '#0339A6')
+    $('#2').css('background-color', secondBackground)
+    $('#5').css('background-color', secondBackground)
+    $('#8').css('background-color', secondBackground)
   }
 }
 const changeColor7 = function (win7) {
   if (board[win7[0]] === 'x') {
     gameOver = true
-    $('#0').css('background-color', '#034001')
-    $('#4').css('background-color', '#034001')
-    $('#8').css('background-color', '#034001')
+    $('#0').css('background-color', firstBackground)
+    $('#4').css('background-color', firstBackground)
+    $('#8').css('background-color', firstBackground)
   } else {
     gameOver = true
-    $('#0').css('background-color', '#0339A6')
-    $('#4').css('background-color', '#0339A6')
-    $('#8').css('background-color', '#0339A6')
+    $('#0').css('background-color', secondBackground)
+    $('#4').css('background-color', secondBackground)
+    $('#8').css('background-color', secondBackground)
   }
 }
 
 const changeColor8 = function (win8) {
   if (board[win8[0]] === 'x') {
     gameOver = true
-    $('#6').css('background-color', '#034001')
-    $('#4').css('background-color', '#034001')
-    $('#2').css('background-color', '#034001')
+    $('#6').css('background-color', firstBackground)
+    $('#4').css('background-color', firstBackground)
+    $('#2').css('background-color', firstBackground)
   } else {
     gameOver = true
-    $('#6').css('background-color', '#0339A6')
-    $('#4').css('background-color', '#0339A6')
-    $('#2').css('background-color', '#0339A6')
+    $('#6').css('background-color', secondBackground)
+    $('#4').css('background-color', secondBackground)
+    $('#2').css('background-color', secondBackground)
   }
 }
 
@@ -235,7 +237,6 @@ const changeText = function (event) {
     if ($(this).text() === '') {
       const player = checkTurn()
       $(this).text(player)
-      console.log($(event.target).text())
       board[$(this).attr('id')] = player
       increaseTurn()
       update.updateGame($(this).attr('id'), player)
@@ -247,6 +248,43 @@ const changeText = function (event) {
   checkWin()
   updateGameOver()
   whoWon()
+}
+
+// Change the color if user wants
+const getRandomColor = function () {
+  const letters = '0123456789ABCDEF'
+  let color = '#'
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)]
+  }
+  return color
+}
+
+const changeColorDefault = function () {
+  firstBackground = '#034001'
+  secondBackground = '#0339A6'
+}
+
+const changeColorWhite = function () {
+  firstBackground = 'white'
+  secondBackground = 'purple'
+}
+
+const changeColorYellow = function () {
+  firstBackground = 'yellow'
+  secondBackground = 'indigo'
+}
+const changeColorBlue = function () {
+  firstBackground = 'blue'
+  secondBackground = 'red'
+}
+const changeColorOrange = function () {
+  firstBackground = 'orange'
+  secondBackground = 'black'
+}
+const changeColorRandom = function () {
+  firstBackground = getRandomColor()
+  secondBackground = getRandomColor()
 }
 
 // This just resets the game engine to the original state.
@@ -263,5 +301,11 @@ const reset = function () {
 
 module.exports = {
   reset,
-  changeText
+  changeText,
+  changeColorWhite,
+  changeColorDefault,
+  changeColorYellow,
+  changeColorBlue,
+  changeColorOrange,
+  changeColorRandom
 }
