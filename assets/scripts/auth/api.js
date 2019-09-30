@@ -26,6 +26,7 @@ const signIn = function (formData) {
       $('#change-password').show()
       $('#changePassword').show()
       $('#colors').show()
+      $('#victory').show()
     }
   })
 }
@@ -64,6 +65,8 @@ const signOut = function () {
       $('#whoseturn').hide()
       $('#changePassword').hide()
       $('#colors').hide()
+      $('#message').show()
+      $('#victory').hide()
     }
   })
 }
