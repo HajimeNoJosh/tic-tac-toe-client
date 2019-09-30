@@ -57,6 +57,9 @@ const updateGameOver = function (over) {
       'game': {
         'over': over
       }
+    },
+    success: function (data) {
+      console.log(data)
     }
   })
 }
@@ -101,7 +104,6 @@ const getGamesLost = function () {
       Authorization: 'Token token=' + store.user.token
     },
     data: {
-
     },
     success: function (data) {
       $('#amount-games-lost').text('Amount of games: ' + data.games.length)
