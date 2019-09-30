@@ -6,6 +6,15 @@ This project is for General Assembly SEI-05 first project of a 10 week full time
 
 I began my project with game logic. I updated my html to visualize the game board better. From there I created an array for my board and created a way to switch between users. I wanted to be able to fill up my array with said player pieces as they made moves. I was also begining to manipulate the page with my pieces. I realized that I needed to check for winners and I could not think of a intial DRY way to do this, so I began to hard code my idea out. Basically wanted to check index of board based off the win condition. So, win1[0, 1, 2] would be board[0] board[1] and board[2] which should all equal the same letter. This is also why I use numbers instead of empty strings in my board array. I also wanted to know which turn it was which would come in handy later as I wanted to switch whose turn it was and visualize this for users. I also began to realize how useful a reset feature would be and began to expand it upon it with more data. I began to split files a little. Mostly looking to not work in app.js as I wanted to begin work on APIs. As I continued I ran into issues with my game and needed to fix these bugs in order to better work with my API. I would like to continue to DRY and split my code, I would also like to let users be able to call upon a previous game and fill up there game board with that game and continue it.
 
+[wireframe](https://wireframe.cc/CshK06)
+
+```
+As a avid gamer, I want more interactivity so that I can have fun.
+As a terrible tic-tac-toe player I want to not feel bad about losing so that I do not shy away from playing
+As a competitive player I want users to have score tracking so I can keep track of my score.
+As a designer I want the ux/ui visuals to feel good so that everyone can have fun
+```
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
