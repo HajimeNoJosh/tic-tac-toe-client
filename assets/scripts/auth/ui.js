@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const successMessage = function (newText) {
-  $('#message').text(newText).hide('fast').show().hide('fast')
+  $('#message').text(newText).hide('slow').show().hide('slow')
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
