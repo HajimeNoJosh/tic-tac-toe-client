@@ -183,10 +183,6 @@ const increaseTurn = function () {
 const whoWon = function () {
   if (turnNum === 9 && gameOver === false) {
     $('#whoseturn').html(`<h1 id="whoseturn">Its a tie</h1>`)
-  } else if (gameOver === true && turnNum === 3) {
-    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
-  } else if (gameOver === true && turnNum === 4) {
-    $('#whoseturn').html(`<h1 id="whoseturn">o won</h1>`)
   } else if (gameOver === true && turnNum === 5) {
     $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
   } else if (gameOver === true && turnNum === 6) {
