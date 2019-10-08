@@ -23,6 +23,7 @@ const signIn = function (formData) {
       $('.signin').hide()
       $('.signUp').hide()
       $('#createGame').show()
+      $('#playAi').show()
       $('#change-password').show()
       $('#changePassword').show()
       $('#colors').show()

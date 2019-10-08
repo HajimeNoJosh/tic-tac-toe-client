@@ -3,7 +3,7 @@
 const store = require('../store.js')
 
 const successMessage = function (newText) {
-  $('#message').text(newText).hide('slow').show().hide('slow')
+  $('#message').text(newText).hide(2000).show().hide(2000)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
 }
@@ -46,6 +46,7 @@ const onChangePasswordFailure = function () {
 }
 
 const signOutSuccess = function () {
+  location.reload()
   $('#message').text('Signed out successfully')
   $('#message').removeClass()
   $('#message').addClass('success')

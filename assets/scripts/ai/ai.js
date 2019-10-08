@@ -122,36 +122,45 @@ const changeColor8 = function (win8) {
     $('#2').css('background-color', secondBackground)
   }
 }
+const win1 = [0, 1, 2]
+const win2 = [3, 4, 5]
+const win3 = [6, 7, 8]
+const win4 = [0, 3, 6]
+const win5 = [1, 4, 7]
+const win6 = [2, 5, 8]
+const win7 = [0, 4, 8]
+const win8 = [6, 4, 2]
 
 // This has the winning combos and checks for the board array index based off of
 // the winning combos number in the 0 1 and 2 index. It checks if all 3 are the
 // same value and then applies the color change.
 
 const checkWin = function () {
-  const win1 = [0, 1, 2]
-  const win2 = [3, 4, 5]
-  const win3 = [6, 7, 8]
-  const win4 = [0, 3, 6]
-  const win5 = [1, 4, 7]
-  const win6 = [2, 5, 8]
-  const win7 = [0, 4, 8]
-  const win8 = [6, 4, 2]
+
   if (board[win1[0]] === board[win1[1]] && board[win1[1]] === board[win1[2]]) {
     changeColor1(win1)
+    return board[win1[0]]
   } else if (board[win2[0]] === board[win2[1]] && board[win2[1]] === board[win2[2]]) {
     changeColor2(win2)
+    return board[win2[0]]
   } else if (board[win3[0]] === board[win3[1]] && board[win3[1]] === board[win3[2]]) {
     changeColor3(win3)
+    return board[win3[0]]
   } else if (board[win4[0]] === board[win4[1]] && board[win4[1]] === board[win4[2]]) {
     changeColor4(win4)
+    return board[win4[0]]
   } else if (board[win5[0]] === board[win5[1]] && board[win5[1]] === board[win5[2]]) {
     changeColor5(win5)
+    return board[win5[0]]
   } else if (board[win6[0]] === board[win6[1]] && board[win6[1]] === board[win6[2]]) {
     changeColor6(win6)
+    return board[win6[0]]
   } else if (board[win7[0]] === board[win7[1]] && board[win7[1]] === board[win7[2]]) {
     changeColor7(win7)
+    return board[win7[0]]
   } else if (board[win8[0]] === board[win8[1]] && board[win8[1]] === board[win8[2]]) {
     changeColor8(win8)
+    return board[win8[0]]
   }
 }
 
@@ -173,7 +182,7 @@ const checkTurn = function () {
 // This function just increases the turnNum for use in which turn it is.
 
 const increaseTurn = function () {
-  turnNum++
+  turnNum ++
 }
 
 // This function changes the text of who won the game over all. It takes the
@@ -181,22 +190,11 @@ const increaseTurn = function () {
 // tie if the turnNum is 9. Otherwise based off which turn it is thats who won.
 
 const whoWon = function () {
-  if (turnNum === 9 && gameOver === false) {
+  let playerWon = checkWin()
+  if (gameOver === false && turnNum === 5) {
     $('#whoseturn').html(`<h1 id="whoseturn">Its a tie</h1>`)
-  } else if (gameOver === true && turnNum === 3) {
-    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
-  } else if (gameOver === true && turnNum === 4) {
-    $('#whoseturn').html(`<h1 id="whoseturn">o won</h1>`)
-  } else if (gameOver === true && turnNum === 5) {
-    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
-  } else if (gameOver === true && turnNum === 6) {
-    $('#whoseturn').html(`<h1 id="whoseturn">o won</h1>`)
-  } else if (gameOver === true && turnNum === 7) {
-    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
-  } else if (gameOver === true && turnNum === 8) {
-    $('#whoseturn').html(`<h1 id="whoseturn">o won</h1>`)
-  } else if (gameOver === true && turnNum === 9) {
-    $('#whoseturn').html(`<h1 id="whoseturn">x won</h1>`)
+  } else if (gameOver === true) {
+    $('#whoseturn').html(`<h1 id="whoseturn">${playerWon} won</h1>`)
   }
 }
 
@@ -216,11 +214,7 @@ const updateGameOver = function () {
 // This function switches the text for whose turn it is.
 
 const whoseTurn = function (player) {
-  if (player === 'x' && turnNum < 9) {
-    $('#whoseturn').html(`<h1 id="whoseturn">It is o's turn</h1>`)
-  } else if (player === 'o' && turnNum < 9) {
-    $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
-  }
+  $('#whoseturn').html(`<h1 id="whoseturn">It is x's turn</h1>`)
 }
 
 // This function does the whole game. It checks to see if the game is over which
@@ -230,6 +224,27 @@ const whoseTurn = function (player) {
 // increases the turn. The API is updated with a similar functionality. Finally,
 // it invokes the whoseTurn function to update the HTML. Otherwise it is an
 // invalid move. It then invokes the 3 remaining functions as defined above.
+let boardAi = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+const makeAiMove = function () {
+  console.log(turnNum)
+  checkWin()
+  const player = checkTurn()
+  for (let i = 0; i < boardAi.length; i++) {
+    if (gameOver === false) {
+      if (parseInt(event.target.id) === parseInt(boardAi[i])) {
+        boardAi.splice(i, 1)
+      }
+    }
+  }
+  if (gameOver === false) {
+    const randomNum = Math.abs(Math.floor(Math.random() * boardAi.length - 1))
+    console.log($('#1.aicell').text())
+    $('#' + boardAi[randomNum] + '.aicell').text('o')
+    board[boardAi[randomNum]] = player
+    boardAi.splice(randomNum, 1)
+  }
+}
 
 const changeText = function (event) {
   // $('#index').on('submit', update.fillBoard)
@@ -238,6 +253,7 @@ const changeText = function (event) {
       const player = checkTurn()
       $(this).text(player)
       board[$(this).attr('id')] = player
+      makeAiMove()
       increaseTurn()
       update.updateGame($(this).attr('id'), player)
       whoseTurn(player)
@@ -248,6 +264,7 @@ const changeText = function (event) {
   checkWin()
   updateGameOver()
   whoWon()
+  console.log(board)
 }
 
 // Change the color if user wants
@@ -292,6 +309,7 @@ const changeColorRandom = function () {
 const reset = function () {
   playerTurn = true
   board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  boardAi = [0, 1, 2, 3, 4, 5, 6, 7, 8]
   $('.aicell').text('')
   $('.aicell').css('background-color', '#0D0D0D')
   $('.cell').text('')

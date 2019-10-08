@@ -5,13 +5,18 @@
 const gamelogicui = require('./game-logic/ui.js')
 const authEvents = require('./auth/events.js')
 const gamesApi = require('./games/api.js')
+const ai = require('./ai/ai.js')
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
 $(() => {
   $('.cell').on('click', gamelogicui.changeText).hide()
   $('#createGame').on('click', gamelogicui.reset).hide()
+  $('#playAi').on('click', ai.reset).hide()
   $('.cell').each(function (index) {
+    $(this).attr('id', index)
+  })
+  $('.aicell').each(function (index) {
     $(this).attr('id', index)
   })
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -40,4 +45,7 @@ $(() => {
     }
   })
   $('#victory').hide()
+  $('#index').on('submit', gamesApi.fillBoard).hide()
+  $('#playAi').on('click', gamesApi.createGameAi).hide()
+  $('.aicell').on('click', ai.changeText).hide()
 })

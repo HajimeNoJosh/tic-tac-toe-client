@@ -28,8 +28,13 @@
       <section class="centerSection">
        <button id="createGame" class="buttons">Create Game</button>
      </section>
+     <section class="centerSection">
+       <button id="playAi" class="buttons">Play Ai</button>
+       <div id="playAinow"> </div>
+     </section>
       <section class="information">
         <h1 id="whoseturn" class="move-me">It is x's turn</h1>
+        <h1 id="indexNum" class="move-me"></h1>
       </section>
       <section class="gameBoard">
         <section class="board">
@@ -48,6 +53,23 @@
           <div class="square4 cell"></div>
         </section>
   </section>
+  <section class="gameBoardai">
+    <section class="board">
+      <div class="square1 aicell"></div>
+      <div class="square1 aicell"></div>
+      <div class="square2 aicell"></div>
+    </section>
+    <section class="board">
+      <div class="square1 aicell"></div>
+      <div class="square1 aicell"></div>
+      <div class="square2 aicell"></div>
+    </section>
+    <section class="board">
+      <div class="square3 aicell"></div>
+      <div class="square3 aicell"></div>
+      <div class="square4 aicell"></div>
+    </section>
+</section>
       <section class="signInSection">
         <h2 class='signin'>Sign In</h2>
         <form id="sign-in">
@@ -79,6 +101,10 @@
       <button id="getstatslost" class="buttons">In-Progress</button>
       <div id="amount-games-lost"> </div>
     </section>
+    <form id="index">
+    <input id='valueId' type="number" name="id">
+    <button>submit</button>
+    </form>
   </section>
   <section class="changePasswordSection">
     <h2 id="changePassword">Change Password</h2>
