@@ -7,7 +7,7 @@ const apiUrls = {
 }
 
 if (window.location.hostname === 'localhost') {
-  apiUrl = apiUrls.development
+  apiUrl = apiUrls.production
 } else {
   apiUrl = apiUrls.production
 }
